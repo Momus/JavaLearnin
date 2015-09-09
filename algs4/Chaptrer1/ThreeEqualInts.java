@@ -1,7 +1,7 @@
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-public class OneOne3 { 
+public class ThreeEqualInts { 
 
     /**
      * 1.1.3 Write a program that takes three integer command-line
@@ -17,8 +17,8 @@ public class OneOne3 {
         int two   = Integer.parseInt(args[1]);
         int three = Integer.parseInt(args[2]);
     
-
-        if ((one==two) && (two==three)){
+        // The lesson here is that (a == b == c) does not work
+        if ((one == two) && (two == three)){
             StdOut.println("equal"); }
         else {
             StdOut.println("not equal");

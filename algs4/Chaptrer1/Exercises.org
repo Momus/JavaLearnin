@@ -1,0 +1,62 @@
+* 1
+*** .1
+***** .1  Give the value of each of the following expressions:
+       + a. (0 + 15) / 2
+          int 7
+       + b. 2.0e-6 * 100000000.1
+          double 200.0000002
+       + c. true && false || true && true
+          true
+***** .2 Give the type and value of each of the following expressions:
+      + a. (1 + 2.236) / 2
+         double 1.618
+      + b. 1 + 2 + 3 + 4.0
+         double 10.0
+      + 4.1 >= 4
+         boolean true
+      + 1 + 2 + "3"
+         String "123"
+***** .3 Write a program that takes three integer command-line arguments and prints
+      equal if all three are equal, and not equal otherwise.
+      file:ThreeEqualInts.java
+***** .4 What (if anything) is wrong with each of the following statements?
+      + a. if (a > b) then c = 0;
+         "then" is not necessary
+      + b. if a > b {c = 0;}
+        need parens for boolean expression
+      + c. if (a > b) c = 0;
+         this is OK
+      + d. if (a > b) c = 0 else b = 0;
+         need braces or newline for else statement
+***** .5 Write a code fragment that prints true if the double variables x and y are both
+      strictly between 0 and 1 and false otherwise.
+#+BEGIN_SRC Java
+double x;
+double y;
+if ((x > 0 ) && ( x<1 )) return true;
+else return false ;
+#+END_SRC
+
+***** .6 What does the following program print?
+#+BEGIN_SRC Java
+int f = 0;
+int g = 1;
+for (int i = 0; i <= 15; i++)
+{
+StdOut.println(f);
+f = f + g;
+g = f - g;
+}
+loop 0: 0 f = 1; g = 0
+loop 1: 1 f = 1; g = 1
+loop 2: 1 f = 2; g = 1
+loop 3: 2 f = 3; g = 2
+loop 4: 3 f = 5; g = 3
+loop 5: 5 f = 8; g = 5
+loop 6: 8 f = that_number g = 8
+loop 7: that_number f = 18 g = 10
+loop 8: 18 f = 28 g = 
+и так далее
+#+END_SRC
+
+***** .7
