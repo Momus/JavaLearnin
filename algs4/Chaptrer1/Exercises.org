@@ -38,7 +38,7 @@ else return false ;
 #+END_SRC
 
 ***** .6 What does the following program print?
-#+BEGIN_SRC Java
+      #+BEGIN_SRC Java
 int f = 0;
 int g = 1;
 for (int i = 0; i <= 15; i++)
@@ -47,16 +47,60 @@ StdOut.println(f);
 f = f + g;
 g = f - g;
 }
-loop 0: 0 f = 1; g = 0
-loop 1: 1 f = 1; g = 1
-loop 2: 1 f = 2; g = 1
-loop 3: 2 f = 3; g = 2
-loop 4: 3 f = 5; g = 3
-loop 5: 5 f = 8; g = 5
-loop 6: 8 f = that_number g = 8
-loop 7: that_number f = 18 g = 10
-loop 8: 18 f = 28 g = 
+inital values: f = 0 ; g = 1
+loop 00: 0 f = 1; g = 0
+loop 01: 1 f = 1; g = 1
+loop 02: 1 f = 2; g = 1
+loop 03: 2 f = 3; g = 2
+loop 04: 3 f = 5; g = 3
+loop 05: 5 f = 8; g = 5 
+loop 06: 8 f = that_number g = 8
+loop 07: that_number f = 21 g = that_number
+loop 08: 21 f = 34 g = 21
+loop 09: 34 f = 55 g = 34
+loop 10: 55 f = 89 g = 55
+loop 11: 89 f = 144 g = 89
 и так далее
-#+END_SRC
+      #+END_SRC
 
-***** .7
+
+***** .7 Give the value printed by each of the following code fragments:
+      + a.
+        #+BEGIN_SRC Java
+        double t = 9.0;
+        while (Math.abs(t - 9.0/t) > .001)
+            t = (9.0/t + t) / 2.0;
+            StdOut.printf("%.5f\n", t)
+        #+END_SRC
+        Output: 
+        3.00009
+      + b.
+        #+BEGIN_SRC Java
+         int sum = 0;
+         for (int i = 1; i < 1000; i++)
+             for (int j = 0; j < i; j++)
+                 sum++;
+         StdOut.println(sum);
+        #+END_SRC
+        Output:
+        499500
+      + c. 
+        #+BEGIN_SRC Java
+        int sum = 0;
+        for (int i = 1; i < 1000; i *= 2)
+            for (int j = 0; j < N; j++)
+                sum++;
+        StdOut.println(sum);
+        #+END_SRC
+        Output:
+        499500
+***** .8 What do each of the following print?
+      + a. System.out.println('b');
+        b
+      + b. System.out.println('b' + 'c');
+        197
+      + c. System.out.println((char) ('a' + 4));
+        e
+***** .9 Write a code fragment that puts the binary representation of a positive integer N
+      into a String s .
+      
